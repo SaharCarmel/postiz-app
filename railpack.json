@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "provider": "node",
+  "packages": { "node": "22", "python": "3.13" },
+  "deploy": {
+    "aptPackages": ["nginx"],
+    "startCommand": "cp var/docker/nginx.conf /etc/nginx/nginx.conf && nginx && pnpm run pm2"
+  }
+}
