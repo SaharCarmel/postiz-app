@@ -1,4 +1,4 @@
-export function getCookieUrlFromDomain(domain: string) {
+export function getCookieUrlFromDomain(_domain: string): string | undefined {
   // Host-only cookies for single-instance self-hosting.
   //
   // The previous implementation derived a cookie Domain attribute from FRONTEND_URL
@@ -9,6 +9,5 @@ export function getCookieUrlFromDomain(domain: string) {
   //
   // Returning undefined omits the Domain attribute, making cookies host-only. They
   // are scoped to the exact host and always accepted — correct for a single instance.
-  void domain;
   return undefined;
 }
